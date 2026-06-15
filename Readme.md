@@ -10,7 +10,7 @@ AI Resume Analyzer is a backend service that uses **Google's** **Gemini AI** to 
 * Multi-Format Support: PDF & DOCX resume parsing
 * Smart Fallback: Basic analysis when AI is unavailable 
 * Real-time Processing: Fast analysis with immediate results
-* Give matching score 
+* Matching score : Precise resume-job matching percentage 
 
 ---
 
