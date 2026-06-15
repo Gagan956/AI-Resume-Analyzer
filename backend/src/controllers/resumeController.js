@@ -19,9 +19,7 @@ export const analyzeResumeController = async (req, res) => {
         filePath = req.file.path;
         const originalName = req.file.originalname;
         const jobDescription = req.body.jobDescription || '';
-        
-        // console.log(` Processing file: ${originalName}`);
-        // console.log(` File size: ${(req.file.size / 1024).toFixed(2)} KB`);
+     
         
         // Extract text from the uploaded file
         let resumeText;
@@ -61,7 +59,7 @@ export const analyzeResumeController = async (req, res) => {
         // Clean up uploaded file 
         if (filePath && fs.existsSync(filePath)) {
             fs.unlinkSync(filePath);
-            console.log(`🗑️ Deleted temporary file: ${filePath}`);
+            console.log(` Deleted temporary file: ${filePath}`);
         }
         
         
@@ -79,7 +77,7 @@ export const analyzeResumeController = async (req, res) => {
         if (filePath && fs.existsSync(filePath)) {  // Clean up file if it exists
             try {
                 fs.unlinkSync(filePath);
-                console.log(`🗑️ Deleted temporary file after error: ${filePath}`);
+                console.log(` Deleted temporary file after error: ${filePath}`);
             } catch (err) {
                 console.error('Error deleting file:', err);
             }

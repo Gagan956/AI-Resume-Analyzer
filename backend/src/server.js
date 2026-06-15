@@ -27,7 +27,7 @@ app.use('/api/resume', resumeRoutes);
 
 
 
-// Health check endpoint
+// Health check 
 app.get('/health', (req, res) => {
     res.json({ 
         status: 'OK', 
@@ -62,7 +62,6 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
     console.log(` Server running on http://localhost:${PORT}`);
-   
-  
+
 });
 
