@@ -18,7 +18,7 @@ if (!fs.existsSync(uploadsDir)) {
  
 }
 
-// Configure multer for temporary file storage
+//  multer for temporary file storage
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, uploadsDir);
@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
     }
 });
 
-// File filter to allow only PDF and DOCX
+// only PDF and DOCX
 const fileFilter = (req, file, cb) => {
     const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
     if (allowedTypes.includes(file.mimetype)) {
@@ -41,7 +41,7 @@ const fileFilter = (req, file, cb) => {
     }
 };
 
-// Configure multer
+//  multer
 const upload = multer({
     storage,
     limits: { 

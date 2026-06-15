@@ -27,7 +27,7 @@ export const extractTextFromFile = async (filePath, originalName) => {
     }
 };
 
-// Improved PDF text extraction using pdf-parse
+// PDF text extraction using pdf-parse
 const extractFromPDF = async (buffer) => {
     try {
         
